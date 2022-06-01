@@ -2,3 +2,9 @@
 - 쿼리 결과를 새 테이블로 만든다.
 - CREATE TABLE 테이블명 SELECT * FROM 테이블명
 - 기존에 존재하지 않는 테이블이 새로 생성됨(일종의 뷰와 동일한 효과)
+
+# INSERT INTO SELECT
+- 쿼리결과를 기존의 테이블에 추가
+- INSERT INTO 테이블명1 SELECT * FROM 테이블명2 WHERE 조건절...
+- 두 개의 별도 쿼리를 하나로 합침
+- SELECT 하는 테이블과 INSERT 하는 테이블은 동일한 구조를 가져야 함
