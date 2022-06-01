@@ -23,3 +23,17 @@ SELECT 컬럼명 FROM 테이블명 WHERE 컬럶명 LIKE 패턴
 - 와일드카드 : %: 0-N글자 / _ : 1글자
 - LIKE와 OR를 중복해서 사용하지 않도록 해야 함
 
+# NULL값
+- 해당 컬럼의 값이 없다는 의미
+- NULL값을 가지고 있는 컬럼을 검색하려면 IS NULL
+- NULL값이 아닌 값을 가지고 있는 컬럼 검색하려면 IS NOT NULL
+
+# NULL 함수 (IF NULL())
+- 숫자컬럼 연산할 때 NULL을 처리해주는 함수
+- NULL값이 나오면 다른 값(주로0)으로 대체해서 계산에 문제없도록 처리
+- 숫자연산/집합함수(예:SUM())의 경우는 처리가 내장되어 있음
+- 직접 함수나 쿼리에 넣는 경우는 NULL함수를 사용해야 함
+
+# GROUP BY/HAVING
+- SELECT 컬럼명, 집합함수명(컬럼명) FROM 테이블명 GROUP BY 컬럼명;
+- HAVING은 집합연산에 WHERE 조건절 대체로 사용
