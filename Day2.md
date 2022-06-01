@@ -37,3 +37,54 @@ SELECT 컬럼명 FROM 테이블명 WHERE 컬럶명 LIKE 패턴
 # GROUP BY/HAVING
 - SELECT 컬럼명, 집합함수명(컬럼명) FROM 테이블명 GROUP BY 컬럼명;
 - HAVING은 집합연산에 WHERE 조건절 대체로 사용
+
+# 서브쿼리(SUBQUERY)
+- 쿼리문 내에 또 다른 쿼리문이 있는 형태
+- ORDER BY 사용 못함
+
+### 다중행 연산자
+- ALL : 여러 개의 레코드의 AND효과(가장 큰 값보다 큰)
+- ANY : 여러 개의 레코드의 OR효과(가장 작은 값보다 큰)
+- IN/EXISTS : 결과값 중에 있는 것 중에서의 의미
+
+# 집합연산
+- 합집합,교집합,차집합...
+- MYSQL에서는 INTERSECT/MINUS는 지원하지 않음
+
+### UNION
+- 두 쿼리의 결과값을 합쳐서 리턴함 
+- SELECT 쿼리1 UNION SELECT 쿼리2 UNION...
+- 다른 테이블이라도 결과값의 형식만 일치하면 됨
+
+### UNION ALL - 중복을 허용하는 UNION
+- SELECT 쿼리1 UNION ALL SELECT 쿼리2 UNION...
+
+# 스키마 
+- DDL : 데이터베이스와 테이블을 CRUD
+- 테이블에 대한 정보는 메타데이터로 데이터사전에 저장,관리됨
+- 데이터 베이스 생성
+- CREATE DATABASE 데이터베이스명;
+- 테이블 생성
+- CREATE TABEL 테이브명(컬럼명1 데이터타입(크기),컬럼명2...);
+
+# 자료형
+### 정수형
+- TINYINT
+- INT
+- BIGIINT
+
+### 실수형(길이, 소수점 이하 자리 수)
+- FLOAT
+- DOUBLE
+- DECIMAL
+
+### 문자열
+- CHAR 고정길이 문자열(최대 255자)
+- VARCHAR 가변길이 문자열(최대 65,535자)
+
+# 제약조건
+- UNIQUE
+- NOT NULL
+- PRIMARY KEY
+- CHECK
+- AUTO INCREMENT 
